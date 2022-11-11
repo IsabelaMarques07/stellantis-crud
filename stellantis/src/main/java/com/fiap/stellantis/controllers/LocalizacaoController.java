@@ -53,7 +53,7 @@ public class LocalizacaoController {
         currentLocalizacao.setCidade(localizacao.getCidade());
         currentLocalizacao.setDistrito(localizacao.getDistrito());
 
-        currentLocalizacao = localizacaoRepository.save(localizacao);
+        localizacaoRepository.save(currentLocalizacao);
 
         return ResponseEntity.ok(currentLocalizacao);
     }

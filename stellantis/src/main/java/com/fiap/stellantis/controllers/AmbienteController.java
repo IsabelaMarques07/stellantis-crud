@@ -53,7 +53,7 @@ public class AmbienteController {
         currentAmbiente.setTemperatura(ambiente.getTemperatura());
         currentAmbiente.setEstado(ambiente.getEstado());
         currentAmbiente.setDistrito(ambiente.getDistrito());
-        currentAmbiente = ambienteRepository.save(ambiente);
+        ambienteRepository.save(currentAmbiente);
 
         return ResponseEntity.ok(currentAmbiente);
     }

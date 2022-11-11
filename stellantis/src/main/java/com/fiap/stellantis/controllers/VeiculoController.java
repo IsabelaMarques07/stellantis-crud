@@ -54,7 +54,7 @@ public class VeiculoController {
         currentVeiculo.setMarca(veiculo.getMarca());
         currentVeiculo.setQuilometragem(veiculo.getQuilometragem());
 
-        currentVeiculo = veiculoRepository.save(veiculo);
+        veiculoRepository.save(currentVeiculo);
 
         return ResponseEntity.ok(currentVeiculo);
     }

@@ -52,7 +52,7 @@ public class RegionalController {
         currentRegional.setData(regional.getData());
         currentRegional.setIdVeiculo(regional.getIdVeiculo());
         currentRegional.setIdLocalizacao(regional.getIdLocalizacao());
-        currentRegional = regionalRepository.save(regional);
+        regionalRepository.save(currentRegional);
 
         return ResponseEntity.ok(currentRegional);
     }
