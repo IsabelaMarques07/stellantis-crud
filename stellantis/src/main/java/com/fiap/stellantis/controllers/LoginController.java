@@ -14,7 +14,7 @@ public class LoginController {
 	
 	@GetMapping("/entrar")
 	@PreAuthorize("hasRole('usuario')")
-	public ModelAndView getOpen() {
-		return new ModelAndView("redirect:/home");
+	public ResponseEntity getOpen() {
+		return ResponseEntity.ok().build();
 	}
 }
